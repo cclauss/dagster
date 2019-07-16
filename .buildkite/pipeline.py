@@ -329,6 +329,7 @@ if __name__ == "__main__":
     )
     steps += python_modules_tox_tests("dagster-graphql")
     steps += python_modules_tox_tests("dagstermill")
+    steps += python_modules_tox_tests("lakehouse", integration=True)
 
     steps += library_tests()
 
