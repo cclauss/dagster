@@ -372,7 +372,7 @@ def _create_step_output_event(step_context, output, type_check, success):
             step_output_handle=StepOutputHandle.from_step(
                 step=step_context.step, output_name=output.output_name
             ),
-            value_repr=repr(output.value),
+            # value_repr='Remove me: #ISSUE NUMBER',
             type_check_data=TypeCheckData(
                 success=success,
                 label=output.output_name,

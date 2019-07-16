@@ -51,12 +51,12 @@ def _yield_compute_results(compute_context, inputs, compute_fn):
 
     for result in gen:
         if isinstance(result, Output):
-            value_repr = repr(result.value)
+            # value_repr = repr(result.value)
             compute_context.log.info(
-                "Solid '{solid}' emitted output '{output}' value {value}".format(
+                "Solid '{solid}' emitted output '{output}'".format(
                     solid=str(step.solid_handle),
                     output=result.output_name,
-                    value=value_repr[:200] + '...' if len(value_repr) > 200 else value_repr,
+                    # value=value_repr[:200] + '...' if len(value_repr) > 200 else value_repr,
                 )
             )
             yield Output(output_name=result.output_name, value=result.value)
