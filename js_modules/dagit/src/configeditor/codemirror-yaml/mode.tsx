@@ -70,7 +70,7 @@ const RegExps = {
   KEYWORD: new RegExp("\\b((" + Constants.join(")|(") + "))$", "i"),
   DICT_COLON: /^:\s*/,
   DICT_KEY: /^\s*(?:[,\[\]{}&*!|>'"%@`][^\s'":]|[^,\[\]{}#&*!|>'"%@`])[^# ,]*?(?=\s*:)/,
-  QUOTED_STRING: /^('([^']|\\.)*'?|"([^"]|\\.)*"?)/,
+  QUOTED_STRING: /^('([^']|\\.)*'?|"([^"\\]|\\.)*"?)/,
   BLOCKSTART_PIPE_OR_ARROW: /^\s*(\||\>)\s*/,
   NUMBER: /^\s*-?[0-9\.]+(?![0-9\.]*[^0-9.\s])\s?/,
   VARIABLE: /^\s*(\&|\*)[a-z0-9\._-]+\b/i
